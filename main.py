@@ -16,9 +16,12 @@ canvas.grid(row=0,column=1)
 
 def get_entry():
     websiteName= website_entry.get()
+    email = email_entry.get()
     password = password_entry.get()
-    print(websiteName)
-    print(password)
+    # print(websiteName)
+    # print(password)
+    f = open("entry.txt","a")
+    f.write(f"{websiteName} | {email} | {password} \n")
 
 
 #Label
@@ -52,13 +55,6 @@ generate_password_btn.grid(row=3,column=2)
 
 add_button = Button(text="Add",width=36,command=get_entry)
 add_button.grid(row=4,column=1,columnspan=2)
-
-
-
-
-
-
-
 
 
 window.mainloop()
