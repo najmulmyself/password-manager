@@ -20,8 +20,10 @@ def get_entry():
     password = password_entry.get()
     # print(websiteName)
     # print(password)
-    f = open("entry.txt","a")
-    f.write(f"{websiteName} | {email} | {password} \n")
+    with open("entry.txt","a") as f:
+        f.write(f"{websiteName} | {email} | {password} \n")
+        website_entry.delete(0,END)
+        password_entry.delete(0,END)
 
 
 #Label
