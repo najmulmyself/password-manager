@@ -19,18 +19,19 @@ def get_entry():
     websiteName= website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
-    answer2 = messagebox.showerror("Empty Field" , "Fill up all the field")
-    answer = messagebox.askokcancel("Save Data",f"Website : {websiteName} \n Password : {password} \n want to save? ")
-    if websiteName and password is None:
-        answer2
-    elif answer:
+    if (websiteName and password) == '':
+        messagebox.showerror("Empty Field" , "Fill up all the field")
+    else:
+        answer = messagebox.askokcancel("Save Data",f"Website : {websiteName} \n Password : {password} \n want to save? ")
+        if answer:
+
 
     # print(websiteName)
     # print(password)
-        with open("entry.txt","a") as f:
-            f.write(f"{websiteName} | {email} | {password} \n")
-            website_entry.delete(0,END)
-            password_entry.delete(0,END)
+            with open("entry.txt","a") as f:
+                f.write(f"{websiteName} | {email} | {password} \n")
+                website_entry.delete(0,END)
+                password_entry.delete(0,END)
 
 
 #Label
