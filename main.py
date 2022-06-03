@@ -1,6 +1,7 @@
 from email.mime import image
 from re import L
 from tkinter import *
+from tkinter import messagebox
 
 window = Tk()
 window.title('Password Manager')
@@ -18,6 +19,7 @@ def get_entry():
     websiteName= website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
+    messagebox.askokcancel("Save Data",f"Website : {websiteName} \n Password : {password} \n want to save? ")
     # print(websiteName)
     # print(password)
     with open("entry.txt","a") as f:
