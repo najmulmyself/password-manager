@@ -19,8 +19,11 @@ def get_entry():
     websiteName= website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
+    answer2 = messagebox.showerror("Empty Field" , "Fill up all the field")
     answer = messagebox.askokcancel("Save Data",f"Website : {websiteName} \n Password : {password} \n want to save? ")
-    if answer:
+    if websiteName and password is None:
+        answer2
+    elif answer:
 
     # print(websiteName)
     # print(password)
