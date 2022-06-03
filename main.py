@@ -19,13 +19,15 @@ def get_entry():
     websiteName= website_entry.get()
     email = email_entry.get()
     password = password_entry.get()
-    messagebox.askokcancel("Save Data",f"Website : {websiteName} \n Password : {password} \n want to save? ")
+    answer = messagebox.askokcancel("Save Data",f"Website : {websiteName} \n Password : {password} \n want to save? ")
+    if answer:
+
     # print(websiteName)
     # print(password)
-    with open("entry.txt","a") as f:
-        f.write(f"{websiteName} | {email} | {password} \n")
-        website_entry.delete(0,END)
-        password_entry.delete(0,END)
+        with open("entry.txt","a") as f:
+            f.write(f"{websiteName} | {email} | {password} \n")
+            website_entry.delete(0,END)
+            password_entry.delete(0,END)
 
 
 #Label
