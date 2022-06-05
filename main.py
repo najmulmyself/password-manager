@@ -2,6 +2,7 @@ from email.mime import image
 from re import L
 from tkinter import *
 from tkinter import messagebox
+import random
 
 window = Tk()
 window.title('Password Manager')
@@ -47,6 +48,9 @@ number = [1,2,3,4,5,6,7,8,9]
 symbol = [' ', '!', '@', '#', '$', '%', '^', '&',
              '*', '(', ')']
 
+
+rn_letter = letter[random.randrange(0,52)]
+print(rn_letter)
 
 
 
