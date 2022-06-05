@@ -44,16 +44,23 @@ letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
              'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
              'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
              'Y', 'Z']
-number = [1,2,3,4,5,6,7,8,9]
+number = [1,2,3,4,5,6,7,8,9,0]
 symbol = [' ', '!', '@', '#', '$', '%', '^', '&',
              '*', '(', ')']
 
 
 rn_letter = random.randint(8,10)
-print(f"{rn_letter}\n")
-for char in range(rn_letter):
-    print(char)
+# print(f"{rn_letter}\n")
+# for char in range(rn_letter):
+#     print(char)
 
+rn_number = random.randint(2,4)
+# for num in range(rn_number):
+#     print(num)
+
+rn_symbol = random.randint(2,4)
+for sym in range(rn_symbol):
+    print(sym)
 
 
 #Label
