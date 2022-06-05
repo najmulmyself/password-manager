@@ -49,8 +49,10 @@ symbol = [' ', '!', '@', '#', '$', '%', '^', '&',
              '*', '(', ')']
 
 
-rn_letter = letter[random.randrange(0,52)]
-print(rn_letter)
+rn_letter = random.randint(8,10)
+print(f"{rn_letter}\n")
+for char in range(rn_letter):
+    print(char)
 
 
 
